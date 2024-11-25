@@ -7,30 +7,32 @@
   - As a user, I want to register an account so that I can participate in the game.
   - **Technologies**: 
     - Backend: ASP.NET Core MVC (C#), Entity Framework Core (SQL Server)
-    - Frontend: React (Forms, Axios for API calls)
+    - Frontend: Next.js (React-based forms, Axios for API calls)
+    - Deployment: Docker containers for the backend and frontend, AWS ECS for hosting.
   - **Tasks**:
     - Create a database table for users.
     - Build API endpoints for registration.
-    - Develop a React form for user input.
+    - Develop a Next.js page for the registration form.
 
 - [ ] **User Login**
   - As a user, I want to log into my account so that I can access the game.
   - **Technologies**:
     - Backend: ASP.NET Core MVC, Identity for authentication
-    - Frontend: React (Forms, Axios)
+    - Frontend: Next.js (React-based forms, Axios)
+    - Deployment: Docker containers, AWS ECS.
   - **Tasks**:
     - Implement login API endpoints.
     - Add JWT-based authentication.
-    - Create React components for the login form.
+    - Create a Next.js page for the login form.
 
 - [ ] **User Logout**
   - As a user, I want to log out of my account so that I can secure my session.
   - **Technologies**:
     - Backend: ASP.NET Core MVC
-    - Frontend: React (Session handling)
+    - Frontend: Next.js (Session handling)
   - **Tasks**:
     - Create an API endpoint to invalidate tokens.
-    - Add logout functionality to React.
+    - Add logout functionality to the frontend.
 
 ---
 
@@ -41,30 +43,30 @@
   - As a user, I want to view available game rooms so that I can choose one to join.
   - **Technologies**:
     - Backend: ASP.NET Core MVC
-    - Frontend: React (State management, Axios for API)
+    - Frontend: Next.js (React state management, Axios for API)
   - **Tasks**:
-    - Develop API to fetch active game rooms.
-    - Build a React component to display room details.
+    - Develop an API to fetch active game rooms.
+    - Build a Next.js page to display the list of rooms.
 
 - [ ] **Create Game Room**
   - As a user, I want to create a new game room so that I can play with friends.
   - **Technologies**:
     - Backend: ASP.NET Core MVC, SignalR for real-time updates
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - API endpoint to create a room.
     - Broadcast new room data via SignalR.
-    - Add a React form to create rooms.
+    - Add a form on the Next.js frontend to create rooms.
 
 - [ ] **Join Game Room**
   - As a user, I want to join an existing game room so that I can participate in a trivia session.
   - **Technologies**:
     - Backend: ASP.NET Core MVC, SignalR
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - API to handle room joining.
     - Notify other players in the room via SignalR.
-    - Build UI for joining rooms.
+    - Build a UI for joining rooms in Next.js.
 
 ---
 
@@ -75,38 +77,38 @@
   - As a host, I want to start the game so that players can begin answering questions.
   - **Technologies**:
     - Backend: ASP.NET Core MVC
-    - Frontend: React (Button actions, Axios)
+    - Frontend: Next.js (Button actions, Axios)
   - **Tasks**:
-    - Create API endpoint to initialize a game.
-    - Update React UI for the host to start the game.
+    - Create an API endpoint to initialize a game.
+    - Update the Next.js frontend for the host to start the game.
 
 - [ ] **Display Questions**
   - As a player, I want to see a trivia question with multiple-choice answers so that I can answer it within the time limit.
   - **Technologies**:
     - Backend: ASP.NET Core MVC
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - Fetch questions from the database.
-    - Build a React component to display questions and a timer.
+    - Build a Next.js component to display questions and a timer.
 
 - [ ] **Answer Question**
   - As a player, I want to select an answer so that I can compete for points.
   - **Technologies**:
     - Backend: ASP.NET Core MVC
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - API endpoint to submit answers.
-    - Update React UI for answer selection.
+    - Update the Next.js frontend for answer selection.
 
 - [ ] **Update Scores**
   - As a user, I want to see my score after each question so that I know how well I am performing.
   - **Technologies**:
     - Backend: ASP.NET Core MVC, SignalR
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - Calculate scores in the backend.
     - Broadcast score updates via SignalR.
-    - Update React UI to display scores.
+    - Update the Next.js component to display scores.
 
 ---
 
@@ -117,19 +119,19 @@
   - As a player, I want to see an updated scoreboard in real-time so that I can track the competition.
   - **Technologies**:
     - Backend: ASP.NET Core MVC, SignalR
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - Implement SignalR hub for score updates.
-    - Build a React component for the scoreboard.
+    - Build a scoreboard component in Next.js.
 
 - [ ] **Room Status**
   - As a user, I want to see when players join or leave the room in real-time so that I stay informed about the game setup.
   - **Technologies**:
     - Backend: ASP.NET Core MVC, SignalR
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - Update room status with SignalR events.
-    - Reflect player changes in the React UI.
+    - Reflect player changes in the Next.js UI.
 
 ---
 
@@ -140,20 +142,20 @@
   - As a player, I want to see the final rankings at the end of a game so that I know who won.
   - **Technologies**:
     - Backend: ASP.NET Core MVC, Entity Framework Core
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - API endpoint to retrieve game results.
-    - Build React UI for end-of-game rankings.
+    - Build a leaderboard page in Next.js.
 
 - [ ] **Global Leaderboard**
   - As a user, I want to view the top players globally so that I can compare my performance.
   - **Technologies**:
     - Backend: ASP.NET Core MVC, Entity Framework Core
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - Create a database table for storing global scores.
     - API to fetch leaderboard data.
-    - Build React UI for global leaderboard.
+    - Build a leaderboard page in Next.js.
 
 ---
 
@@ -164,31 +166,31 @@
   - As an admin, I want to add, edit, or delete trivia questions so that I can keep the game content updated.
   - **Technologies**:
     - Backend: ASP.NET Core MVC
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - API endpoints for CRUD operations on questions.
-    - React UI for admin question management.
+    - Build a question management page in Next.js.
 
 - [ ] **View Statistics**
   - As an admin, I want to view player statistics and game data so that I can analyze performance trends.
   - **Technologies**:
     - Backend: ASP.NET Core MVC
-    - Frontend: React
+    - Frontend: Next.js
   - **Tasks**:
     - Build a statistics API.
-    - Develop an admin dashboard in React.
+    - Develop an admin dashboard in Next.js.
 
 ---
 
 ## 7. Deployment
 ### Goal: Deploy the application to be accessible online.
 
-- [ ] **Backend Hosting**
-  - As a developer, I want to host the C# backend on Azure so that users can access the API.
-  - **Technologies**: Azure App Service, Docker (optional)
+- [ ] **Backend Deployment**
+  - As a developer, I want to package the backend in a Docker container and deploy it to AWS ECS so that it is scalable and reliable.
+  - **Technologies**: Docker, AWS ECS, AWS RDS (SQL Server).
 
-- [ ] **Frontend Hosting**
-  - As a developer, I want to host the React frontend on Vercel or Netlify so that users can access the game in their browser.
-  - **Technologies**: Vercel, Netlify
+- [ ] **Frontend Deployment**
+  - As a developer, I want to package the Next.js frontend in a Docker container and deploy it to AWS ECS so that it is accessible to users globally.
+  - **Technologies**: Docker, AWS ECS, AWS S3/CloudFront (for assets).
 
 ---
