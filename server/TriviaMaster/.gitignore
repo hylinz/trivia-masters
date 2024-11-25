@@ -1,0 +1,65 @@
+# Build files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.vs/
+.vscode/
+*.temp
+*.tmp
+*.cache
+
+# Config files
+appsettings*.json
+
+# Database files
+*.mdf
+*.ldf
+
+# Dependency directories
+packages/
+.vscode/
+
+# IDE-specific files
+.idea/
+*.code-workspace
+
+# Docker
+docker-compose.override.yml
+*.env
+
+# JetBrains Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Dotnet generated files
+*.swp
+*.pidb
+*.seed
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Build artifacts
+publish/
+wwwroot/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
